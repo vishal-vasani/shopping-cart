@@ -1,0 +1,149 @@
+.header-margin{
+    margin-bottom: 60px;
+}
+
+header hr{
+    border-top: 2px solid #eee;
+}
+
+.item-content{
+    position: relative;
+    min-height: 150px;
+    padding-top: 10px;
+}
+
+.item-action{
+    position: absolute;
+    bottom: 0;
+}
+
+.item-action span{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.upper-case{
+    text-transform: uppercase;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.item-action span:first-child{
+    padding-left: 0px;
+}
+
+.item-padding{
+    padding-top: 25px !important;
+}
+
+.amount::first-letter{
+    font-size: 12px;
+    vertical-align: text-top;
+}
+
+.row-bottom{
+    border-bottom: 7px solid #c3c3c3
+}
+
+.row-top{
+    border-top: 3px solid #c3c3c3
+}
+
+.info-padding{
+    padding-bottom: 25px;
+}
+
+.billing-padding{
+    padding-bottom: 30px;
+}
+
+.billing-margin{
+    margin-bottom: 25px;
+}
+
+.text-underline{
+    text-decoration: underline;
+}.
+.text-align-top{
+	text-algin:top;
+}
+.text-bold{
+    font-weight: bold;
+}
+.btn-promo{
+    background-color: transparent;
+    border: 1px solid;
+}
+
+.btn-promo:hover, .btn-promo:active{
+    border: 1px solid !important;
+    color: black;
+}
+
+a{
+    text-decoration: none !important;
+	color:#c3c3c3;
+}
+
+.modal-header {
+    padding: 0px 10px 0px 0px;
+    border-bottom: 0px;
+}
+
+.color {
+    height: 15px;
+    width: 15px;
+    float: left;
+    border: 1px solid;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+
+.color-container {
+    height: 20px;
+    width: 60px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.size-qty{
+    float: left;
+    width: 70px;
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+    margin-bottom: 10px;
+}
+
+.center-block{
+    display: table;
+    margin: 0 auto;
+}
+
+.hand-cursor{
+    cursor: pointer;
+}
+
+.item-title{
+    font-size: 20px;
+    color: #c3c3c3;
+}
+
+.item-amount {
+    font-size: 30px;
+}
+
+.item-amount span{
+    font-size: 16px;
+    vertical-align: 7px;
+}
+
+.item-default {
+    color: #c3c3c3;
+}
+
+.item-edit{
+    width: 145px;
+    margin-bottom: 10px;
+}

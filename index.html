@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta name="author" content="Vishal Vasani">
+    <title>Shopping Bag</title>    
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom/custom.css" rel="stylesheet">
+</head>
+
+<body ng-controller="AppCtrl">
+    <div ng-include="'views/header.html'"></div>
+    <div ui-view></div>
+    
+    <script src="vendor/jquery/jquery-1.12.0.min.js"></script>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular/angular-ui-router.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="vendor/angular/ui-bootstrap-1.1.2.min.js"></script>
+    
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/app-ctrl.js"></script>
+    <script src="scripts/controllers/cart-ctrl.js"></script>
+    <script src="scripts/services/cart-service.js"></script>
+    <script src="scripts/directives/only-numbers.js"></script>
+    <script src="scripts/services/edit-modal-service.js"></script>
+    <script src="scripts/controllers/edit-modal-ctrl.js"></script>
+</body>
+
+</html>

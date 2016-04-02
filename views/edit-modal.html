@@ -1,0 +1,65 @@
+<div class="modal-header">
+    <h3 class="modal-title pull-right"><a ng-click="cancel()" class="hand-cursor">X</a></h3>
+</div>
+<div class="modal-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 row-top text-center">
+            	<div class="row">
+            		<div class="col-md-12 row-top text-center">
+                		<div class="item-title upper-case">{{item.p_name}}</div>
+                	</div>
+                </div>
+
+                <div class="row">
+            		<div class="col-md-12 text-center">
+                		<p class="item-amount"><span>{{item.c_currency}}</span> {{item.p_price}}</p>
+                	</div>
+                </div>
+
+                <div class="row">
+            		<div class="col-md-12 text-center">
+                		<div class="item-default upper-case">{{item.p_variation}}</div>
+		                <div class="text-center color-container">
+			                <div ng-repeat="color in item.p_available_options.colors">
+			                	<div ng-click="changeColor(color)" class="color hand-cursor" ng-style="{'background-color': color.name}"></div>
+			                </div>
+		                </div>
+                	</div>
+                </div>
+                
+
+                <div class="row">
+            		<div class="col-md-12">
+            			<div class="center-block">
+		                	<select class="from-control input-sm size-qty" ng-model="item.p_selected_size" ng-options="size as size.code for size in item.p_available_options.sizes">
+		                		<option value="">Size</option>
+		                	</select>
+		                	<input type="text" class="form-control input-sm size-qty" ng-model="item.p_quantity" min="1" value="1" restrict-input="^[0-9-]*$">
+	                	</div>
+	                </div>
+                </div>
+
+               	<div class="row">
+            		<div class="col-md-12 text-center">
+                		<button type="button" class="btn btn-primary item-edit" ng-click="ok()">EDIT</button>
+                	</div>
+                </div>
+
+                <div class="row">
+            		<div class="col-md-12 text-center">
+                		See product details
+                	</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+            	<img ng-src="images/T{{item.p_id}}.jpg">
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+<!-- <div class="modal-footer">
+    <button type="button" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div> -->

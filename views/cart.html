@@ -1,0 +1,106 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+	
+      <table class="table row-bottom">
+            <thead>
+                <tr class="row-bottom">
+                    <th width="60%">{{items}} ITEMS</th>
+                    <th width="10%" class="text-center">SIZE</th>
+                    <th width="10%" class="text-center">QTY</th>
+                    <th width="10%" class="text-right">PRICE</th>
+                </tr>
+            </thead>
+            <tbody ng-init="getProducts()">
+                <tr ng-repeat="product in products">
+                    <td class="item-padding">
+                        <div class="row">
+                            <div class="col-md-3"><img ng-src="images/T{{product.p_id}}.jpg"></div>
+                            <div class="col-md-9">
+                                <div class="item-content">
+                                    <div class="upper-case"><strong>{{product.p_name}}</strong></div>
+                                    <div><span>Style #:</span> <span class="upper-case">{{product.p_style}}</span></div>
+                                    <div><span>Colour:</span> <span class="capitalize">{{product.p_selected_color.name}}</span></div>
+                                </div>
+                                <div class="item-action">
+                                    <span><a class="hand-cursor" ng-click="showEditModal(product)">EDIT</a></span>|
+                                    <span><a class="hand-cursor" ng-click="removeItem($index)"><i class="glyphicon glyphicon-remove"></i> REMOVE</a></span>|
+                                    <span><a class="hand-cursor">SAVE FOR LATER</a></span></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="item-padding text-center">{{product.p_selected_size.code}}</td>
+                    <td class="item-padding text-center">
+                        <input type="text" class="form-control input-sm" id="quantity" name="quantity" ng-model="product.p_quantity" min="1" required value="1" numbers-only="^[0-9]*$">
+                    </td>
+                    <td class="item-padding text-right"><p class="amount">{{product.p_price | currency:product.c_currency}}</p></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="info-padding">
+                <strong>Need help<br>or have questions?</strong>
+            </div>
+            <div class="info-padding">
+                Call Customer Service at <br>1-8000-555-5555
+            </div>
+            <div class="info-padding text-underline">
+                Chat with one of<br>our stylists
+            </div>
+            <div class="info-padding text-underline">
+                See return<br>& exchange policy
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="row row-bottom billing-padding billing-margin">
+                <div class="col-md-8 upper-case">
+                    Enter Promotion code<br> or gift card
+                </div>
+                <div class="col-md-2"><input type="text" class="form-control"></div>
+                <div class="col-md-2 upper-case text-right pull-right"><button class="btn btn-promo">Apply</button></div>
+            </div>
+            <div class="row billing-padding">
+                <div class="col-md-12">
+                    <div class="pull-left upper-case">SubTotal</div>
+                    <div class="pull-right">{{subTotal | currency:"$"}}</div>
+                </div>
+            </div>
+            <div class="row billing-padding" ng-show="discountCode">
+                <div class="col-md-12">
+                    <div class="pull-left upper-case">Promotion Code <strong>{{discountCode}}</strong> Applied</div>
+                    <div class="pull-right">-{{discountAmount | currency:"$"}}</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pull-left upper-case">Estimated Shipping*</div>
+                    <div class="pull-right upper-case">Free</div>
+                </div>
+            </div>
+            <hr>
+            <div class="row row-bottom billing-padding billing-margin">
+                <div class="col-md-12">
+                    <div class="pull-left "><span class="upper-case text-bold">Estimated Total</span><BR><small>You qualify for free shipping beacuse your order is over $50*</small></div>
+                    <div class="pull-right text-align-top" >{{grandTotal | currency:"$"}}</div>
+                </div>
+            </div>
+            <div class="row billing-padding">
+                <div class="col-md-10 upper-case text-right text-underline pull-left">
+                    Continue Shopping
+                </div>
+                <div class="col-md-2 upper-case text-right pull-right">
+                    <button class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+            <div class="row billing-padding">
+                <div class="col-md-12 text-right">
+                    <img src="images/lock.jpg">Secure Checkout. Shopping is always safe & secure
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
